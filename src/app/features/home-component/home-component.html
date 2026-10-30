@@ -1,0 +1,19 @@
+<div class="home-component">
+    <div class="container-left">
+        <app-navbar-component></app-navbar-component>
+    </div>
+    <div class="container-right">
+        <div class="container-logo">
+            <img src="/logo-agentDesk.png" alt="">
+        </div>
+        <div class="container-bundle">
+            @for(stat of stats; track stat.title){
+                <app-bundle-number-component
+                    [title]="stat.title"
+                    [valeur]="stat.valeur"
+                ></app-bundle-number-component>
+            }
+        </div>
+
+    </div>
+</div>

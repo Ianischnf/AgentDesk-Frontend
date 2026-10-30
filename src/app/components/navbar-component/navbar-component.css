@@ -1,0 +1,46 @@
+.navbar {
+    background-color: var(--item-bg-color);
+    width: 13vh;
+    height: 85vh;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.navbar-item {
+    width: 10vh;
+    height: 10vh;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.navbar-top {
+    /* background-color: red; */
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-bottom {
+    /* background-color: black; */
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.navbar-bottom>.navbar-item {
+    margin-bottom: 30px;
+}
