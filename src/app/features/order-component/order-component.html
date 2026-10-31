@@ -1,0 +1,47 @@
+<div class="order-component">
+    <div class="order-right">
+        <app-navbar-component></app-navbar-component>
+    </div>
+
+    <div class="order-left">
+        <div class="table-container">
+            <p>Nombre de commandes : {{ orders().length }}</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Description</th>
+                        <th>Statut</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @for(o of orders(); track o.id) {
+                    <tr>
+                        <td>{{ o.nomClient }}</td>
+                        <td>{{ o.description }}</td>
+                        <td>{{ o.statut }}</td>
+                        <td class="td-actions">
+                            <app-button-component
+                                color   = "#E16A54"
+                                icon    = "/update.png"
+                                (click) = FormUpdateComponentTogle()
+                            ></app-button-component>
+                            <app-button-component
+                                 color  = "#E16A54"
+                                 icon   = "/delete.png"
+                            ></app-button-component>
+                        </td>
+                    </tr>
+
+                    }
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
