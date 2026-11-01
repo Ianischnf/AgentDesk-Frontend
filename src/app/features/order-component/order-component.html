@@ -3,6 +3,7 @@
         <app-navbar-component></app-navbar-component>
     </div>
 
+
     <div class="order-left">
         <div class="table-container">
             <p>Nombre de commandes : {{ orders().length }}</p>
@@ -24,24 +25,25 @@
                         <td>{{ o.description }}</td>
                         <td>{{ o.statut }}</td>
                         <td class="td-actions">
-                            <app-button-component
-                                color   = "#E16A54"
-                                icon    = "/update.png"
-                                (click) = FormUpdateComponentTogle()
-                            ></app-button-component>
-                            <app-button-component
-                                 color  = "#E16A54"
-                                 icon   = "/delete.png"
-                            ></app-button-component>
+                            <app-button-component color="#E16A54" icon="/update.png"
+                                (click)="openUpdateForm(o)"></app-button-component>
+                            <app-button-component color="#E16A54" icon="/delete.png"></app-button-component>
                         </td>
                     </tr>
 
                     }
-
-
                 </tbody>
             </table>
         </div>
+        @if(selectedOrder(); as order) {
+        <div class="modal-overlay">
+            <div class="modal-content">
+                <app-form-update-order-component
+                    [order]="order"
+                ></app-form-update-order-component>
+            </div>
+        </div>
+        }
     </div>
 
 </div>

@@ -1,0 +1,17 @@
+form{
+    display: flex;
+    flex-direction : column;
+    padding: 20px;
+    width: 30vh;
+    height: auto;
+    gap: 10px;
+}
+
+.container-input{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    padding: 5px;
+}

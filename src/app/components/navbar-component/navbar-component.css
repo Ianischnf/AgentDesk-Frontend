@@ -9,8 +9,8 @@
 }
 
 .navbar-item {
-    width: 10vh;
-    height: 10vh;
+    width: 7vh;
+    height: 7vh;
     border-radius: 10px;
     border: 1px solid var(--border-color);
     background-color: transparent;
@@ -43,4 +43,8 @@
 
 .navbar-bottom>.navbar-item {
     margin-bottom: 30px;
+}
+
+.navbar-item > img {
+    height: 30px;
 }

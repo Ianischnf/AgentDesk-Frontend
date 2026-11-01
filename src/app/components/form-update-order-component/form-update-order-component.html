@@ -1,1 +1,26 @@
-<p>form-update-order-component works!</p>
+<form #updateOrderForm="ngForm" (ngSubmit)="onSubmit(updateOrderForm)">
+
+    <div class="container-input">
+        <label for="">Nom</label>
+        <input type="text" name="nom" [ngModel]="order().nomClient">
+    </div>
+
+
+    <div class="container-input">
+        <label for="">Description</label>
+        <input type="text" name="desc" [ngModel]="order().description">
+    </div>
+
+
+    <div class="container-input">
+        <label for="">Status</label>
+        <input type="text" name="status" [ngModel]="order().statut">
+    </div>
+
+    <app-button-component
+        color="#E16A54"
+        label="Modifier la commande"
+        buttonClass="button-update"
+    ></app-button-component>
+
+</form>

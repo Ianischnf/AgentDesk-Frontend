@@ -14,7 +14,7 @@
 
 .order-left {
     /* background-color: blue; */
-    flex : 1;
+    flex: 1;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -53,6 +53,7 @@ td {
     padding: 10px 20px;
     color: var(--text-color)
 }
+
 .td-actions {
     display: flex;
     gap: 10px;
@@ -66,4 +67,31 @@ td:first-child {
 th:last-child,
 td:last-child {
     border-radius: 0 8px 8px 0;
+}
+
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--bg-color);
+    padding: 30px;
+    border-radius: 12px;
+    color : var(--text-color);
+    width: 500px;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
 }

@@ -1,5 +1,10 @@
-<button [style.background-color] = "color">
+<button 
+    [style.background-color]="color"
+    [ngClass]="buttonClass()"
+>
     @if(icon) {
-        <img [src]= "icon" alt="">
+    <img [src]="icon" alt="">
     }
+
+    {{label}}
 </button>
